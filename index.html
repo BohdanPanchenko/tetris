@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tetris</title>
+        <style>
+            :root {
+                background-color: #586673;
+            }
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                display: grid;
+                grid-template-columns: max-content min-content;
+                column-gap: 50px;
+                height: 100vh;
+                width: 100vw;
+                justify-content: center;
+                align-content: center;
+            }
+            .game-board {
+                position: relative;
+                /* border: 1px solid black; */
+            }
+            .game-info {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                background-color: #ffd2558a;
+                height: 150px;
+                width: 150px;
+                font-size: 30px;
+                margin-top: 300px;
+                border-radius: 15px;
+                color: #fff;
+                font-family: monospace;
+                text-align: center;
+            }
+            .cell {
+                box-sizing: border-box;
+                position: absolute;
+                border: 2px solid black;
+                background-color: #d6fcff;
+                background-color: #ffefc48a;
+                border-radius: 5px;
+            }
+            .cell.circle {
+                outline: 3px solid black;
+                border-radius: 15px;
+                border: none;
+            }
+        </style>
+    <script defer src="bundle.js"></script></head>
+    <body>
+        <div class="game-board"></div>
+        <div class="game-info">
+            <div class="score"><span>Score: </span>0</div>
+            <div class="level"><span>Level: </span>1</div>
+        </div>
+    </body>
+</html>
